@@ -50,9 +50,9 @@ func Part2() int {
 			if unicode.IsNumber(char) {
 				numbers = append(numbers, string(char))
 			} else {
-				for numIdx, val := range needles {
-					if strings.HasPrefix(text[i:], val) {
-						numbers = append(numbers, strconv.Itoa(numIdx+1))
+				for idx, n := range needles {
+					if strings.HasPrefix(text[i:], n) {
+						numbers = append(numbers, strconv.Itoa(idx+1))
 					}
 				}
 			}
